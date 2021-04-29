@@ -207,9 +207,10 @@ position: absolute;
 left: 55%;
 top: 850px;
 transform: translate(-50%, -50%);
-/*border: 1px solid #FFFF00;*/
+border: 1px solid #FFFF00;
 padding: 0px;
 z-index: 10;
+
 
 }
 
