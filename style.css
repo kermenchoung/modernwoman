@@ -5,6 +5,10 @@
   overflow: hidden;
 }*/
 
+@font-face { 
+font-family: FontName;  
+src: url('path/filename.woff2') format('woff2'), url('path/filename.woff') format('woff'), url('path/filename.ttf') format('truetype'); 
+}
 a{
 color: green;
 text-decoration: none;
@@ -55,6 +59,9 @@ z-index: 10;
 }
 h1{
   /*font-family: GT Super DS Trial;*/
+font-feature-settings: "kern" 1; font-kerning: normal;
+ letter-spacing: 0.015em; 
+ word-spacing: 0.001em; 
 
   font-family: Jost;
   font-size:30px;
