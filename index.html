@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Navigate Your Fertility</title>
+  <link rel="stylesheet" href="./style.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://codepen.io/P1N2O/pen/xxbjYqx.css'><link rel="stylesheet" href="./style.css">
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+  
+
+</head>
+<body>
+
+ <!-- <div>
+  <div class="fade"><h1>I could have put</h1> </div>
+  <div class="fade"><h1>my infertility in a box</h1></div>
+  <div class="fade"><h1>and never shared </h1></div>
+  <div class="fade"><h1>the pain it caused me.</h1></div>
+  <div class="fade"><h1>Societal stigma and </h1></div>
+  <div class="fade"><h1>my cultural background</h1></div>
+  <div class="fade"><h1>were on the way</h1></div>
+   <div class="fade"><h1>to be open about it.</h1></div>
+  <div class="fade"><h1>However,</h1></div>
+  <div class="fade"><h1>I needed to give </h1></div>
+   <div class="fade"><h1>my painful experiences</h1></div>
+  <div class="fade"><h1>a sense of meaning-</h1></div>
+  <div class="fade"><h1>by helping  others</h1></div>
+  <div class="fade"><h1>to have an opportunity</h1></div>
+  <div class="fade"><h1>to be proactive </h1></div>
+   <div class="fade"><h1>about their </h1></div>
+  <div class="fade"><h1>reproductive health.</h1> </div>
+</div>
+-->
+
+
+
+
+<!--<a href="https://infertilityawareness.org"> 
+<div class="imageMichelle">
+<img src="Michelle.png"  alt="Michelle Obama"> 
+</div>
+</a>-->
+
+
+
+
+	
+<!--The following image works as a link:<br>
+      <a href="https://www.qries.com/">
+         <img alt="Qries" src="https://www.qries.com/images/banner_logo.png"
+         width="150" height="70">
+      </a>-->
+  
+
+
+<!-- partial:index.partial.html -->
+<script type="x-shader/x-vertex" id="vertexMetaballs">
+	attribute vec2 position;
+  void main() {
+  	gl_Position = vec4(position, 0.0, 1.0);
+	}
+</script>
+<script type="x-shader/x-fragment" id="fragmentMetaballs">
+	precision highp float;
+  const int NUM_METABALLS = 4;
+
+  uniform vec3 metaballs[4];
+  uniform vec2 uResolution;
+  uniform sampler2D uColorSampler;
+  uniform sampler2D uNoiseSampler;
+  uniform float uTime;
+  
+	void main(){
+  	float x = gl_FragCoord.x;
+    float y = gl_FragCoord.y;
+    float v = 0.0;
+    float radius = 2.0;
+    float speed = 1.5;
+    for (int i = 0; i < NUM_METABALLS; i++) {
+    	vec3 mb = metaballs[i];
+			float dx = mb.x - x;
+			float dy = mb.y - y;
+
+      float r = mb.z;
+      v += r*r/(dx*dx + dy*dy);
+		}
+
+    vec4 color;
+    if (v > 1.0) {
+    	vec4 textureColor = texture2D(uColorSampler, vec2(gl_FragCoord.x / uResolution.x, gl_FragCoord.y / uResolution.y) );
+      vec4 noiseColor = (texture2D(uNoiseSampler, gl_FragCoord.xy / 100.0 )) / 1.;
+      float l = length(noiseColor);
+      if(l > 1.05){
+      	vec4 mixedColor = textureColor + (noiseColor * 0.001);
+				color = mixedColor;
+			}
+      else{
+      	//discard;
+        color = textureColor * 0.99;
+			}
+		}
+    else {
+    	discard;
+		}
+    gl_FragColor = vec4(color.rgb, 0.5);
+	}
+
+</script>
+
+<!--<img src="modern/navigate.png" alt="navigate">-->
+
+
+<div class="wrapper grad">
+
+<a href="file:///Users/kermenchoung/CCA/Final_Project%203/index.html"> 
+ <div class="image">
+ <img src="images/mw.png"  alt="modern woman"> 
+</div>
+</a>
+
+<a href="file:///Users/kermenchoung/CCA/Final_Project%203/index.html"> 
+<div class="imagelogo">
+<img src="images/logo.png"  alt="modern woman"> 
+</div>
+</a>
+
+
+  <!--<div class="dots"></div>
+  <div class="nav"></div>-->
+  <canvas id="metaball-canvas" class="metaball-canvas"></canvas>
+
+</div>
+
+
+
+
+<div class="fact"> <a href="file:///Users/kermenchoung/CCA/Final_Project%203/1in8/index.html" target="1 in 8 women struggle with infertility."> <h1>1 in 8 women struggle with infertility.</h1></a> 
+
+</div>
+
+<!--<div class="name"> <h5>Michelle Obama</h5></div>-->
+
+
+
+
+
+
+
+
+<!--<video controls> <source src="1in8.mov" type="video.mov">  </video>-->
+<a href="https://www.washingtonpost.com/politics/2018/11/09/michelle-obama-is-one-millions-who-silently-struggled-with-infertility-heres-why-her-broken-silence-could-matter/" target="_blank"> 
+<div class="imageMichelle">
+ 
+
+<img src="images/Michelle.png"  alt="Michelle Obama"> 
+</div>
+</a>
+
+
+
+
+
+
+
+
+
+
+
+<!--<div class="fade"><h2>I can’t believe I had made it to 30 <br>and no American doctor or gynecologist <br>had ever suggested that there is <br>a very simple blood test (called AMH),<br> that can help measure your fertility rate,<br> even though I go for annual checkups.
+</h2> </div>-->
+
+ <!--<div class="fade"><h3>Be Proactive about your health</h3> </div>-->
+
+
+
+
+<div class="fade"> <a href="https://modernfertility.com" target="_blank"> 
+<div class="proactive"> <img src="images/proactive.png"  alt="Be Proactive about your health"> </div>
+</a>  </div>
+
+
+
+<div class="fade"> <a href="https://modernfertility.com" target="_blank"> 
+<div class="proactive"> <img src="images/navigate.png"  alt="Be Navigate your fertility"> </div>
+</a>  </div>
+
+<div class="fade"> <a href="https://modernfertility.com" target="_blank"> 
+<div class="proactive"> <img src="images/educate.png"  alt="Educate yourself"> </div>
+</a>  </div>
+
+
+<div class="fade"> <a href="https://modernfertility.com" target="_blank"> 
+<div class="proactive"> <img src="images/advocate.png"  alt="Become an advocate"> </div>
+</a>  </div>
+
+
+<div class="fade"> <a href="https://modernfertility.com" target="_blank"> 
+<div class="proactive"> <img src="images/support.png"  alt="Support each other"> </div>
+</a>  </div>
+
+
+<div class="fade"> <a href="https://modernfertility.com" target="_blank"> 
+<div class="proactive"> <img src="images/talk.png"  alt="Talk about it"> </div>
+</a>  </div>
+
+<div id="Michelle">
+
+
+<div class="navbar">
+
+<div class="nav"> <a href="https://modernfertility.com" target="_blank"> <h1>Navigate your fertility </h1></a> </div>
+
+<div class="nav"> <a href="https://infertilityawareness.org" target="_blank"> <h1>Educate yourself </h1></a> </div>
+
+<div class="nav"> <a href="https://resolve.org/get-involved/become-an-advocate" target="_blank"> <h1>Become an advocate</h1></a> </div>
+
+<div class="nav"> <a href="https://www.fertilityoutloud.com" target="_blank"> <h1>Support each other  </h1></a> </div>
+
+<div class="nav"> <a href="https://resolve.org/support/infertility-and-relationships/talking-about-infertility/" target="_blank"> <h1>Talk about it</h1></a></div>
+
+</div>
+
+
+<a href="https://infertilityawareness.org"> 
+<div class="imageMichelle2">
+<img src="images/Michelle2.png"  alt="Michelle Obama"> 
+</div>
+</a>
+
+</div>
+
+
+
+
+
+<!-- partial -->
+  <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-183/Metaballs.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script><script  src="./script.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
+
+</body>
+</html>
