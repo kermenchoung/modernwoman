@@ -25,8 +25,8 @@ color: pink;
 }
 .fade {
   
-  margin: 20px;
-  padding: 20px;
+  margin: 40px;
+  padding: 40px;
   background-color: none;
   opacity: 1;
   text-decoration: none;
@@ -209,9 +209,9 @@ width:30%;
 height:30%;
 position: absolute;
 left: 55%;
-top: 850px;
+top: 400px;
 transform: translate(-50%, -50%);
-border: 1px solid #FFFF00;
+
 padding: 0px;
 z-index: 10;
 
@@ -232,7 +232,7 @@ position:absolute;
 width:40%;
 height:30%;
 left: 0%;
-top: 850px;
+top: 450px;
 
 /*transform: translate(-50%, -50%);*/
 
