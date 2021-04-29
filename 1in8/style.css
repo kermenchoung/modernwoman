@@ -5,6 +5,16 @@
   overflow: hidden;
 }*/
 
+
+.imagelogo{
+position: absolute;
+left: 1300px;
+top: 7300px;
+transform: translate(-50%, -50%);
+z-index: 100;
+
+}
+
 a {
   color: #ffffff;
 }
