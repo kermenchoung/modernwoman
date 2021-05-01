@@ -242,6 +242,27 @@ z-index: 0;
 
 }
 
+.iglogo{
+position:absolute;
+width:40%;
+height:30%;
+left: 3%;
+top: 930px;
+
+/*transform: translate(-50%, -50%);*/
+
+padding: 0px;
+z-index: 0;
+z-index: 100;
+border: 1px color:red;
+background: green;
+}
+
+
+
+
+
+
 /*.nav{
   background-image: url(https://kermenchoung.github.io/modern/navigate.png);
   width: 100%;

@@ -15,6 +15,18 @@ z-index: 100;
 border: 1px color:red;
 }
 
+.iglogo{
+position: absolute;
+left: 1300px;
+top: 7330px;
+transform: translate(-50%, -50%);
+z-index: 100;
+border: 1px color:red;
+}
+
+
+
+
 a {
   color: #ffffff;
 }
