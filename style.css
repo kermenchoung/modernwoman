@@ -20,7 +20,8 @@ text-decoration: none;
 
 a:hover h1{
 
-color: pink;
+color: white;
+text-decoration: underline;
 
 }
 .fade {
@@ -209,7 +210,7 @@ width:30%;
 height:30%;
 position: absolute;
 left: 55%;
-top: 400px;
+top: 410px;
 transform: translate(-50%, -50%);
 
 padding: 0px;
