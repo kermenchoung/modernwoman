@@ -5,7 +5,7 @@
   overflow: hidden;
 }*/
 
-@font-face {
+/*@font-face {
 font-family: 'Jost';
 src: url('../Josts/Jost.eot');
 src: url('../Jost/Jost.eot?#iefix') format('embedded-opentype'),
@@ -15,23 +15,15 @@ src: url('../Jost/Jost.eot?#iefix') format('embedded-opentype'),
 font-weight: 500;
 font-style: uppercase;
 
-}
+}*/
 
-@font-face {
-  font-family: 'Jost';
-  src: url('webfont.eot'); /* IE9 Compat Modes */
-  src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('webfont.woff2') format('woff2'), /* Super Modern Browsers */
-       url('webfont.woff') format('woff'), /* Pretty Modern Browsers */
-       url('webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('webfont.svg#svgJost') format('svg'); /* Legacy iOS */
-}
+
 
 
 
 @font-face { 
 font-family: Jost;  
-src: url('path/jost.woff2') format('woff2'), url('path/jost.woff') format('woff'), url('path/jost.ttf') format('truetype'); 
+src: url('path/Jost-Medium.woff2') format('woff2'), url('path/Jost-Medium.woff') format('woff'), url('path/Jost-Medium.ttf') format('truetype'); 
 }
 a{
 color: green;
@@ -90,7 +82,7 @@ font-feature-settings: "kern" 1; font-kerning: normal;
 
   font-family: Jost;
   font-size:30px;
-  font-weight: 500;
+  font-weight: medium;
   color:#ffffff;
   margin: 20px;
   padding: 20px;
