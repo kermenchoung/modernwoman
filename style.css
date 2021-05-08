@@ -21,10 +21,10 @@ font-style: uppercase;
 
 
 
-@font-face { 
+/*@font-face { 
 font-family: Jost;  
 src: url('path/Jost-Medium.woff2') format('woff2'), url('path/Jost-Medium.woff') format('woff'), url('path/Jost-Medium.ttf') format('truetype'); 
-}
+}*/
 a{
 color: green;
 text-decoration: none;
@@ -82,7 +82,7 @@ font-feature-settings: "kern" 1; font-kerning: normal;
 
   font-family: Jost;
   font-size:30px;
-  font-weight: medium;
+  font-weight:bold;
   color:#ffffff;
   margin: 20px;
   padding: 20px;
