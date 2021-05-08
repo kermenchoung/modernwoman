@@ -6,6 +6,18 @@
 }*/
 
 @font-face {
+font-family: 'Jost';
+src: url('../Josts/Jost.eot');
+src: url('../Jost/Jost.eot?#iefix') format('embedded-opentype'),
+     url('../Jost/Jost.woff') format('woff'),
+     url('../Jost/Jostr.ttf') format('truetype'),
+     url('../Jost/Jost.svg#Jost') format('svg');
+font-weight: 500;
+font-style: uppercase;
+
+}
+
+@font-face {
   font-family: 'Jost';
   src: url('webfont.eot'); /* IE9 Compat Modes */
   src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
