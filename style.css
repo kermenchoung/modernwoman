@@ -10,8 +10,8 @@
 
 
 @font-face { 
-font-family: FontName;  
-src: url('path/filename.woff2') format('woff2'), url('path/filename.woff') format('woff'), url('path/filename.ttf') format('truetype'); 
+font-family: Jost;  
+src: url('path/jost.woff2') format('woff2'), url('path/jost.woff') format('woff'), url('path/jost.ttf') format('truetype'); 
 }
 a{
 color: green;
