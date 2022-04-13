@@ -4,25 +4,35 @@
   margin: 0px;
   overflow: hidden;
 }*/
+@font-face { 
+font-family: FontName;  
+src: url('path/filename.woff2') format('woff2'), url('path/filename.woff') format('woff'), url('path/filename.ttf') format('truetype'); 
+}
+a{
+color: green;
+text-decoration: none;
+}
 
-
-.imagelogo{
+/*.imagelogo{
 position: absolute;
 left: 1300px;
 top: 7300px;
 transform: translate(-50%, -50%);
 z-index: 100;
 border: 1px color:red;
+}*/
+
+.imagelogo{
+position: fixed;
+left: 1090px;
+top: 710px;
+
+
+
+z-index: 100;
 }
 
-.iglogo{
-position: absolute;
-left: 1300px;
-top: 7330px;
-transform: translate(-50%, -50%);
-z-index: 100;
-border: 1px color:red;
-}
+
 
 
 
@@ -37,29 +47,63 @@ a {
   padding: 50px;
   background-color: none;
   opacity: 1;
-
 }
-h1{
-  /*font-family: GT Super DS Trial;*/
+
+
+/*h1{
+  font-family: GT Super DS Trial;
   width:1250px;
   height:200px;
-  font-family: GT Super DS;
+  font-family: Jost;
   font-weight: 500;
   font-size:70px;
   text-align: center;
-/*background-color: #ffffff;*/
+background-color: #ffffff;
 
   margin: 0;
   color: #ffffff;
   padding: 80px;
+  
+*/
+
+.fact h1{
+
+  font-size:50px;
+  font-weight: 500;
+  color:#ffffff;
+  margin-top: 50px;
+  padding: 80px;
   /*text-shadow: 0 2px 1px #000;*/
 
+  text-transform: uppercase;
 
+  text-align: center;
 }
 
+h1{
+  /*font-family: GT Super DS Trial;*/
+font-feature-settings: "kern" 1; font-kerning: normal;
+ /*letter-spacing: 0.015em; 
+ word-spacing: 0.001em; */
+ text-align: center;
+
+  font-family: Jost;
+  font-size:80px;
+  font-weight: 300;
+  color:#ffffff;
+  margin: 20px;
+  padding: 80px;
+  /*text-shadow: 0 2px 1px #000;*/
+
+  text-transform: uppercase;
+}
+
+
+
+
+
 h2{
-   width:1250px;
-  height:200px;
+
   font-family: Jost;
   font-weight: 100;
   font-size:20px;
@@ -121,27 +165,18 @@ body {
   }
 }
 
-.dots{
 
-  /*background-image: url(https://kermenchoung.github.io/modern/bkgr.png);*/
-  /*background-image: url(https://kermenchoung.github.io/modern/bkgrN.png);*/
-   background-image: url(https://kermenchoung.github.io/modern/gradbkgr/index.html);
-  /*width: 100%;
-  height:100%;
-  /*opacity: .1;*/
-  /*background-repeat: repeat;*/
-}
 
-.image{
-
+/*.image{
 position: absolute;
-left: 70%;
+left: 50%;
 top: 3200px;
 transform: translate(-50%, -50%);
 border: 5px solid #FFFF00;
 padding: 10px;
-z-index: 10;
+z-index: 10;*/
 
-}
+
+
 
 
