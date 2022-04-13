@@ -1,261 +1,365 @@
-<!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>Navigate Your Fertility</title>
-  <link rel="stylesheet" href="./style.css">
-	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en" />
+/*body {
+ /* background-color: #101010;
+  color: #fff;
+  margin: 0px;
+  overflow: hidden;
+}*/
 
-<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel='stylesheet' href='https://codepen.io/P1N2O/pen/xxbjYqx.css'><link rel="stylesheet" href="./style.css">
-<link rel="stylesheet" href="https://indestructibletype.com/fonts/Jost.css" type="text/css" charset="utf-8" 
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
+
+
+@font-face { 
+font-family: FontName;  
+src: url('path/filename.woff2') format('woff2'), url('path/filename.woff') format('woff'), url('path/filename.ttf') format('truetype'); 
+}
+a{
+color: green;
+text-decoration: none;
+}
+
+a:hover h1{
+
+color: white;
+text-decoration: underline;
+
+}
+.fade {
+  
+  margin: 40px;
+  padding: 40px;
+  background-color: none;
+  opacity: 1;
+  text-decoration: none;
+
+}
+
+.fact h1{
+
+  font-size:50px;
+  font-weight: 500;
+  color:#ffffff;
+  margin-top: 50px;
+  padding: 0px;
+  /*text-shadow: 0 2px 1px #000;*/
+
+  text-transform: uppercase;
+
+  text-align: center;
+}
+
+
+.proactive{
+width: 100%;
+/*height: 750px;*/
+
+
+/*border: 5px solid #FFFF00;*/
+
+z-index: 10;
+
+}
+
+.proactive img{
+  width: 100%;
+  height: auto;
+}
+
+
+h1{
+  /*font-family: GT Super DS Trial;*/
+font-feature-settings: "kern" 1; font-kerning: normal;
+ letter-spacing: 0.015em; 
+ word-spacing: 0.001em; 
+
+  font-family: Jost;
+  font-size:30px;
+  font-weight: 500;
+  color:#ffffff;
+  margin: 20px;
+  padding: 20px;
+  /*text-shadow: 0 2px 1px #000;*/
+
+  text-transform: uppercase;
+}
+
+h2{
+
+font-feature-settings: "kern" 1; font-kerning: normal;
+ letter-spacing: 0.015em; 
+ word-spacing: 0.001em; 
+
+  font-family: GT Super DS Trial;
+  /*font-size:30px;*/
+    font-size:20px;
+  font-weight: 500;
+  color:#ffffff;
+  margin: 50px;
+  padding: 00px;
+  text-align: center;
+
+}
+
+  /*text-shadow: 0 2px 1px #000;*/
 
   
-
-</head>
-<body>
-
- <!-- <div>
-  <div class="fade"><h1>I could have put</h1> </div>
-  <div class="fade"><h1>my infertility in a box</h1></div>
-  <div class="fade"><h1>and never shared </h1></div>
-  <div class="fade"><h1>the pain it caused me.</h1></div>
-  <div class="fade"><h1>Societal stigma and </h1></div>
-  <div class="fade"><h1>my cultural background</h1></div>
-  <div class="fade"><h1>were on the way</h1></div>
-   <div class="fade"><h1>to be open about it.</h1></div>
-  <div class="fade"><h1>However,</h1></div>
-  <div class="fade"><h1>I needed to give </h1></div>
-   <div class="fade"><h1>my painful experiences</h1></div>
-  <div class="fade"><h1>a sense of meaning-</h1></div>
-  <div class="fade"><h1>by helping  others</h1></div>
-  <div class="fade"><h1>to have an opportunity</h1></div>
-  <div class="fade"><h1>to be proactive </h1></div>
-   <div class="fade"><h1>about their </h1></div>
-  <div class="fade"><h1>reproductive health.</h1> </div>
-</div>
--->
+  /*text-shadow: 0 2px 1px #000;*/
 
 
 
 
-<!--<a href="https://infertilityawareness.org"> 
-<div class="imageMichelle">
-<img src="Michelle.png"  alt="Michelle Obama"> 
-</div>
-</a>-->
+
+
+  /*font-family: GT Super DS Trial;*/
+  /*width:1250px;
+  height:200px;
+  font-family: GT Super DS;
+  font-weight: 500;
+  font-size:70px;
+  text-align: center;
+/*background-color: #ffffff;*/
+
+  /*margin: 0;
+  color: #ffffff;
+  padding: 80px;
+  /*text-shadow: 0 2px 1px #000;*/
 
 
 
+/*h2{
+   width:1250px;
+   height:200px;
+  font-family: Aprikas;
+  font-weight: bold;
+  font-size:50px;
 
-	
-<!--The following image works as a link:<br>
-      <a href="https://www.qries.com/">
-         <img alt="Qries" src="https://www.qries.com/images/banner_logo.png"
-         width="150" height="70">
-      </a>-->
+
+  margin: 0;
+ color:#ffffff;
+  padding: 80px;*/
   
 
-
-<!-- partial:index.partial.html -->
-<script type="x-shader/x-vertex" id="vertexMetaballs">
-	attribute vec2 position;
-  void main() {
-  	gl_Position = vec4(position, 0.0, 1.0);
-	}
-</script>
-<script type="x-shader/x-fragment" id="fragmentMetaballs">
-	precision highp float;
-  const int NUM_METABALLS = 4;
-
-  uniform vec3 metaballs[4];
-  uniform vec2 uResolution;
-  uniform sampler2D uColorSampler;
-  uniform sampler2D uNoiseSampler;
-  uniform float uTime;
+h3{
   
-	void main(){
-  	float x = gl_FragCoord.x;
-    float y = gl_FragCoord.y;
-    float v = 0.0;
-    float radius = 2.0;
-    float speed = 1.5;
-    for (int i = 0; i < NUM_METABALLS; i++) {
-    	vec3 mb = metaballs[i];
-			float dx = mb.x - x;
-			float dy = mb.y - y;
+   font-family: Jost;
+   font-size:40px;
+    font-weight: bold;
+  
+    color:#ffffff;
+    margin: 0;
 
-      float r = mb.z;
-      v += r*r/(dx*dx + dy*dy);
-		}
+  padding-top: 150px;
+  padding-left: 80px;
+  text-transform: uppercase;
+}
 
-    vec4 color;
-    if (v > 1.0) {
-    	vec4 textureColor = texture2D(uColorSampler, vec2(gl_FragCoord.x / uResolution.x, gl_FragCoord.y / uResolution.y) );
-      vec4 noiseColor = (texture2D(uNoiseSampler, gl_FragCoord.xy / 100.0 )) / 1.;
-      float l = length(noiseColor);
-      if(l > 1.05){
-      	vec4 mixedColor = textureColor + (noiseColor * 0.001);
-				color = mixedColor;
-			}
-      else{
-      	//discard;
-        color = textureColor * 0.99;
-			}
-		}
-    else {
-    	discard;
-		}
-    gl_FragColor = vec4(color.rgb, 0.5);
-	}
+body {
+  background: linear-gradient(-45deg, #ffffff, #ea78ac, #7381bc, #fce61a);
+  background-size: 400% 400%;
+  -webkit-animation: gradient 15s ease infinite;
+          animation: gradient 15s ease infinite;
+          /*background-size: 2000px;*/
 
-</script>
+}
 
-<!--<img src="modern/navigate.png" alt="navigate">-->
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
-<div class="wrapper grad">
+.dots{
 
-
- <div class="image">
- <img src="images/mw.png"  alt="modern woman"> 
-</div>
-
-
-<a href="http://modernwoman.life/"> 
-<div class="imagelogo">
-<img src="images/logo.png"  alt="modern woman"> 
-</div>
-</a>
-
-
-  <!--<div class="dots"></div>
-  <div class="nav"></div>-->
-  <canvas id="metaball-canvas" class="metaball-canvas"></canvas>
-
-</div>
+  /*background-image: url(https://kermenchoung.github.io/modern/bkgr.png);*/
+  /*background-image: url(https://kermenchoung.github.io/modern/bkgrN.png);*/
+   /*background-image: url(https://kermenchoung.github.io/modern/gradbkgr/index.html);
+  /*width: 100%;
+  height:100%;
+  /*opacity: .1;*/
+  /*background-repeat: repeat;*/
+}
 
 
+#Michelle{
+position: relative;
+display: flex;
+justify-content: space-between;
 
 
-<div class="fact"> <a href="http://modernwoman.life/1in8/" target="1 in 8 women struggle with infertility."> <h1>1 in 8 women struggle with infertility.</h1></a> </div>
+}
 
 
+.image{
 
-<!--<div class="name"> <h5>Michelle Obama</h5></div>-->
+/*width:300px;
+height:100px;*/
 
+position: absolute;
 
+left: 0;
+right: 0;
+margin: 0 auto;
+top: 350px;
+/*transform: translate(-50%, -50%);*/
 
+padding: 10px;
+text-align: center;
+z-index: 5;
 
+/*margin: auto ;
 
-
-
-
-<!--<video controls> <source src="1in8.mov" type="video.mov">  </video>-->
-<a href="https://www.washingtonpost.com/politics/2018/11/09/michelle-obama-is-one-millions-who-silently-struggled-with-infertility-heres-why-her-broken-silence-could-matter/" target="_blank"> 
-<div class="imageMichelle">
+width: 299px;
+height:169px;
+border: 5px solid #FFFF00;
+padding: 10px;*/
  
+ 
+ 
+ /*position:absolute;
+  top:50%;
+   left:50%;
+  width: 299px;
+  height:169px;
 
-<img src="images/Michelle.png"  alt="Michelle Obama"> 
-</div>
-</a>
-
-
-
-
-
-
-
+  background-color: #000000;*/
 
 
+}
+.imageMichelle{
+/*position: relative;*/
+width: 100%;
+height:700px;
+/*left: 35%;*/
+
+/*top: 500px;*/
+/*padding-bottom:100px;*/
+/*transform: translate(-50%, -50%);*/
 
 
-<!--<div class="fade"><h2>I can’t believe I had made it to 30 <br>and no American doctor or gynecologist <br>had ever suggested that there is <br>a very simple blood test (called AMH),<br> that can help measure your fertility rate,<br> even though I go for annual checkups.
-</h2> </div>-->
+z-index: 10;
 
- <!--<div class="fade"><h3>Be Proactive about your health</h3> </div>-->
+}
 
+.imageMichelle img{
+  width: 100%;
+  height: auto;
+}
 
-<div class="fade"> <a href="https://modernfertility.com" target="_blank"> 
-<div class="proactive"> <img src="images/standwith.png"  alt="Stand with 1 in 8"> </div>
-</a>  </div>
+.imageMichelle2{
 
-<div class="fade"> <a href="https://modernfertility.com" target="_blank"> 
-<div class="proactive"> <img src="images/proactive.png"  alt="Be Proactive about your health"> </div>
-</a>  </div>
-
-
-
-<div class="fade"> <a href="https://modernfertility.com" target="_blank"> 
-<div class="proactive"> <img src="images/navigate.png"  alt="Be Navigate your fertility"> </div>
-</a>  </div>
-
-<div class="fade"> <a href="https://modernfertility.com" target="_blank"> 
-<div class="proactive"> <img src="images/educate.png"  alt="Educate yourself"> </div>
-</a>  </div>
-
-
-<div class="fade"> <a href="https://modernfertility.com" target="_blank"> 
-<div class="proactive"> <img src="images/advocate.png"  alt="Become an advocate"> </div>
-</a>  </div>
-
-
-<div class="fade"> <a href="https://modernfertility.com" target="_blank"> 
-<div class="proactive"> <img src="images/support.png"  alt="Support each other"> </div>
-</a>  </div>
-
-
-<div class="fade"> <a href="https://modernfertility.com" target="_blank"> 
-<div class="proactive"> <img src="images/talk.png"  alt="Talk about it"> </div>
-</a>  </div>
-
-<div id="Michelle">
-
-
-<div class="navbar">
-
-<div class="nav"> <a href="https://modernfertility.com" target="_blank"> <h1>Navigate your fertility </h1></a> </div>
-
-<div class="nav"> <a href="https://infertilityawareness.org" target="_blank"> <h1>Educate yourself </h1></a> </div>
-
-<div class="nav"> <a href="https://resolve.org/get-involved/become-an-advocate" target="_blank"> <h1>Become an advocate</h1></a> </div>
-
-<div class="nav"> <a href="https://www.fertilityoutloud.com" target="_blank"> <h1>Support each other  </h1></a> </div>
-
-<div class="nav"> <a href="https://resolve.org/support/infertility-and-relationships/talking-about-infertility/" target="_blank"> <h1>Talk about it</h1></a></div>
-
-</div>
-
-
-<a href="https://www.instagram.com/modernwomanfertility/"> 
-<div class="iglogo">
-<img src="images/ig.png"  alt="modern woman"> 
-</div>
-</a>
-
-
-<a href="https://infertilityawareness.org"> 
-<div class="imageMichelle2">
-<img src="images/Michelle2.png"  alt="Michelle Obama"> 
-</div>
-</a>
-
-</div>
+align-self: flex-end;
+flex-grow: 0;
 
 
 
 
+z-index: 10;
 
-<!-- partial -->
-  <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-183/Metaballs.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script><script  src="./script.js"></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
+}
 
-</body>
-</html>
+/*.navbar a {                   apr13
+  flex-grow: 0;
+}*/
+
+.imageMichelle2 img{
+width: 100%;
+height:auto;
+
+}
+
+.imagelogo{
+position: fixed;
+left: 60px;
+top: 60px;
+transform: translate(-50%, -50%);
+z-index: 100;
+
+}
+/*.navbar{             apr13
+width:40%;
+height:30%;
+/*transform: translate(-50%, -50%);
+padding: 0px;
+z-index: 0;
+}*/
+
+.iglogo{
+
+width:40%;
+height:30%;
+
+
+
+/*transform: translate(-50%, -50%);*/
+
+padding: 0px;
+z-index: 0;
+z-index: 100;
+border: 1px color:red;
+background: green;
+}
+
+
+
+
+
+
+/*.nav{
+  background-image: url(https://kermenchoung.github.io/modern/navigate.png);
+  width: 100%;
+  height:100%;
+  /*opacity: .1;
+  background-repeat: repeat;
+
+}*/
+
+
+.wrapper{
+  position:relative;
+  top:0px;
+  left:0px;
+  width: 100%;
+  height:100vh;
+  /*text-align: center;*/
+}
+
+.grad {
+  /*background: red;*/ /* For browsers that do not support gradients 
+  /*background: -webkit-linear-gradient(left top, #152a8e, #b1376c); /* For Safari 5.1 to 6.0 */
+ /*background: -o-linear-gradient(bottom right, #152a8e, #b1376c); /* For Opera 11.1 to 12.0 */
+ /*background: -moz-linear-gradient(bottom right, #152a8e, #b1376c); /* For Firefox 3.6 to 15 */
+  /*background: linear-gradient(to bottom right, #152a8e, #b1376c); /* Standard syntax */
+}
+.metaball-canvas{
+  width:100%;
+  height:100%;
+  position: relative;
+  top:0;
+  left:0;
+}
+
+
+
+
+@media only screen and (max-width: 800px){
+
+}
